@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>ePaw - Polish Airports Weather App</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500i,600,600i,700,700i,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600i,700,900" rel="stylesheet">
+
+        <!-- bookmarks icon -->
+        <!-- wstawic ikonke do zakladek-->
+        <link rel="icon" type="image/png" href="" />
+
+        <!-- Css -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="fonts/font-mfizz.css" type="text/css" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- H E A D E R -->
+        <header class="header" id="start">
+
+            <!-- Nawigacja - menu -->
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#epaw-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#start" class="navbar-brand">
+                            <i class="fa fa-plane"></i><span> ePaw</span>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="epaw-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#start" class="nav-item">Start <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#map" class="nav-item">Mapa</a></li>
+                            <li><a href="#opinions" class="nav-item">Piloci</a></li>
+                            <li><a href="#numbers" class="nav-item">Technologie</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Zawartosc Headera -->
+            <div class="header-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="logo text-center">
+                                <img src="images/logo.png" alt="logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="header-text">
+                                <h1>Sprawdz aktualną pogode na największych polskich lotniskach</h1>
+                                <p>Nie leć w ciemno!</p>
+                            </div>
+                            <div class="header-btns">
+
+                                <!-- Header buttons -->
+                                <a class="btn btn-download" data-toggle="modal" data-target="#myModal" href="#">Ściągnij</a>
+
+                                <!-- wyskakujace okno modalne -->
+
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&Chi;</button>
+                                                <h4 class="modal-title">Aplikacja w fazie tworzenia</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                Przykro nam, ale aplikacja na urządzenia mobline jest obecnie w fazie tworzenia ;) Zapraszamy do sprawdzenia pogody poprzez strone internetowa
+                                            </div>
+                                            <div class="modal-footer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="btn btn-tour" href="#map">Sprawdź Pogodę
+                                <i class="fa fa-angle-down"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-md-offset-1">
+                            <!-- tu moze wstawie jakis obrazek -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mapa Google -->
+        <section id="map">
+            <div class="google-map-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <!-- Mapa -->
+                            <div id="mapa"></div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="google-map-des">
+                                <div class="google-map-item">
+                                    <div class="fa_plane">
+                                        <i class="fa fa-plane"></i>
+                                    </div>
+
+                                    <h3>Wybierz swoje lotnisko</h3>
+                                    <p>Po lewej strone znajduje się mapa z zaznaczonymi
+                                        najważniejszymi portami lotniczymi w polsce.
+                                        Po wybraniu danego lotniska, pojawią się podstawowe
+                                        informacje niezbędne dla każdego pilota, oraz przycisk,
+                                        dzięki któremu sprawdzisz aktualne warunki pogodowe.</p>
+
+                                </div>
+                                <div class="google-map-item">
+                                    <table class="table table-bordered text-center">
+                                      <thead>
+                                        <tr>
+                                          <th colspan="2" id="airport_name">#</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th>Kod ICAO</th>
+                                          <td id="icao_name"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>Kod IATA</th>
+                                          <td id="iata_name">-</td>
+                                        </tr>
+                                        <tr>
+                                          <th>Wspolrzedne:</th>
+                                          <td id="coordinates">-</td>
+                                        </tr>
+                                        <tr>
+                                          <th rowspan="2">Pasy Startowe:</th>
+                                          <td id="rwy_01">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="rwy_02">-</td>
+                                        </tr>
+                                        <tr>
+                                          <th rowspan="3">Częstotliwości:</th>
+                                          <td id="tower">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="ground">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="approach">-</td>
+                                        </tr>
+                                        <tr>
+                                          <th>Strona WWW:</th>
+                                          <td id="www">-</td>
+                                        </tr>
+                                        <tr>
+                                          <th colspan="2"><button type="button" class="btn btn-warning">Aktualna Pogoda</button></th>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opinie Pilotow -->
+        <section class="pilots" id="opinions">
+            <div class="pilots-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="carousel-pilots" class="carousel slide" data-ride="carousel">
+
+                                <!-- indicatores -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-pilots" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-pilots" data-slide-to="1"></li>
+                                    <li data-target="#carousel-pilots" data-slide-to="2"></li>
+                                </ol>
+
+                                <!-- wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <!-- item 01 -->
+                                    <div class="item active text-center">
+                                        <img src="images/client-01.jpg" alt="pilots" class="center-block">
+                                        <div class="pilots-caption">
+                                            <h2>Ryszard Staniek</h2>
+                                            <h4><span>Kapitan, </span>Polskie Linie Lotnicze LOT</h4>
+                                            <p>"Latam od ponad 30 lat, nic nie może popsuć pilotowi humoru tak jak zła pogoda. Dzięki aplikacji EPAW, jestem przygotowany na każdą ewentualność"</p>
+
+                                        </div>
+                                    </div>
+                                    <!-- item 02 -->
+                                    <div class="item text-center">
+                                        <img src="images/client-02.jpg" alt="pilots" class="center-block">
+                                        <div class="pilots-caption">
+                                            <h2>Małgorzata Borowska</h2>
+                                            <h4><span>Pierwszy Oficer, </span>Ryanair</h4>
+                                            <p>"W pracy pilota najważniejsze jest prawidłowe i skrupulatne przygotowanie do lotu. Znając aktualne warunki pogodowę, jestem w stanie zapewnić pasażerom stuprocentowe bezpieczeństwo."</p>
+
+                                        </div>
+                                    </div>
+                                    <!-- item 03 -->
+                                    <div class="item text-center">
+                                        <img src="images/client-03.jpg" alt="pilots" class="center-block">
+                                        <div class="pilots-caption">
+                                            <h2>Marek Koniarek</h2>
+                                            <h4><span>uczeń, </span>GoldWings Flight Academy</h4>
+                                            <p>"Podczas szkolenia uczymy się nie tylko praktycznego pilotażu samolotu. Pogłebiamy wiedzę teoretyczną na temat czynników zewnętrznych które mogą wpłynąć na bezpieczeństwo i komfort lotu. Dzięki aplikacji EPAW zawsze będe wiedział jak przygotować się bezpiecznie do lotu."</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- technologie -->
+        <section class="technology" id="numbers">
+            <div class="technology-overlay">
+                <div class="container">
+                    <div class="row text-center">
+                        <h2>Użyte technologie:</h2>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-2 col-md-offset-1">
+                            <div class="technology-item">
+                                <div>
+                                    <i class="icon-html5-alt"></i>
+                                </div>
+                                <h3>HTML5</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="technology-item">
+                                <div>
+                                    <i class="icon-css3-alt"></i>
+                                </div>
+                                <h3>CSS3</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="technology-item">
+                                <div>
+                                    <i class="icon-bootstrap"></i>
+                                </div>
+                                <h3>Bootstrap</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="technology-item">
+                                <div>
+                                    <i class="icon-javascript-alt"></i>
+                                </div>
+                                <h3>JavaScript</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="technology-item">
+                                <div>
+                                    <i class="icon-jquery"></i>
+                                </div>
+                                <h3>jQuery</h3>
+                                <p>+ Ajax</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- F o o t e r -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="copyright">
+                        <p>Copyright &copy; 2017<span> Lech Cirmirakis </span>for <span>CodersLab</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap $ JavaScript -->
+    <script src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/out.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSHGZX2763Lb-SOwkgPwMVUtFQNtBkzss&callback=initMap">
+    </script>
+    <script src="js/map.js"></script>
+</body>
+
+</html>

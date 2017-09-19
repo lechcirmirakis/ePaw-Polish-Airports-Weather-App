@@ -1,0 +1,30 @@
+/* Small Devices */
+@media only screen and (max-width: 767px) {
+
+    .navbar-default {
+        background-color: #fff !important;
+        border-color: #e6e6e6;
+    }
+    #mapa {
+        width: 100%;
+    }
+    .google-map-item {
+    	padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    .footer {
+        text-align: center;
+    }
+
+}
+/* Small Devices And Tablets */
+@media only screen and (max-width: 768px) {
+
+    .fa_plane {
+        display: none;
+    }
+    .header-text, .header-btns {
+        text-align: center;
+    }
+}

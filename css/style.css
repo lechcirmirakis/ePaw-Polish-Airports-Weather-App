@@ -1,0 +1,320 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+p {
+	font-size: 14px;
+}
+
+/* ========== Navigation ========== */
+
+.navbar-default {
+	background-color: transparent;
+	border-color: #444;
+	z-index: 110;
+	margin-top: -100px;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-0-transition: all 1s;
+	-webkit-transition: all 1s;
+
+}
+.navbar-default .navbar-nav > li > a {
+	padding-top: 15px;
+	color: #B5B5B5;
+	font-family: "Raleway", sans-serif;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	-webkit-transition: all 1s;
+	text-transform: uppercase;
+}
+.navbar-default .navbar-nav > li > a:hover {
+	color: #dbd100;
+}
+.navbar-default .navbar-nav > li > a:focus {
+	color: #dbd100;
+}
+
+.navbar-brand {
+	padding: 9px 15px;
+}
+.navbar-brand i {
+	font-size: 35px;
+	color: #dbd100;
+	padding-top: 0px;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	-webkit-transition: all 1s;
+}
+.navbar-brand span {
+	font-size: 35px;
+	color: #dbd100;
+	font-weight: 600;
+}
+.navbar-default .navbar-nav > .active>a,
+.navbar-default .navbar-nav > .active>a:hover,
+.navbar-default .navbar-nav > .active>a:focus {
+	background-color: transparent;
+	color: #dbd100;
+}
+
+/* ========== HEADER ========== */
+
+.header {
+	background-image: url("../images/plane2.jpeg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+}
+
+.header-overlay {
+	background-color: rgba(31, 31, 31, 0.35);
+	min-height: 700px;
+}
+.logo {
+	padding-bottom: 50px;
+}
+.header-text h1 {
+	color: #fff;
+	font-size: 35px;
+	font-weight: 300;
+	line-height: 45px;
+	padding-top: 30px;
+	text-transform: uppercase;
+}
+.header-text p {
+	color: #fff;
+	font-size: 17px;
+	line-height: 28px;
+	font-weight: 300;
+	margin-top: 40px;
+}
+.header-btns {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.btn-download,
+.btn-download:focus,
+.btn-download:active,
+.btn-download:visited {
+	background: transparent;
+	border-color: #dbd100;
+	padding: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 19px;
+	text-transform: uppercase;
+	border-radius: 3px;
+	color: #dbd100;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+}
+.btn-download:hover {
+	background-color: #dbd100;
+	color: #fff;
+}
+.btn-tour,
+.btn-tour:focus,
+.btn-tour:active,
+.btn-tour:visited {
+	color: #A9ADB0;
+	margin: 20px;
+	text-transform: uppercase;
+	font-size: 19px;
+	font-weight: 500;
+	background: transparent;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+}
+.btn-tour:hover {
+	color: #fff;
+}
+.btn-tour i {
+	font-size: 20px;
+	padding-left: 5px;
+	color: #dbd100;
+}
+
+/* ========== Google Maps ========== */
+
+#mapa {
+  width: 100%;
+  height: 600px;
+  background-color: grey;
+}
+
+.google-map-wrapper {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.google-map-item {
+	position: relative;
+	padding-bottom: 4px;
+	padding-left: 80px;
+}
+
+.google-map-item div {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.google-map-item div i {
+	font-size: 55px;
+	color: #dbd100;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	-moz-transition: all 1s;
+}
+
+.google-map-item h3 {
+	color: #343434;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.google-map-item p {
+	padding-top: 12px;
+	padding-bottom: 15px;
+	color: #727272;
+	font-size: 15px;
+}
+
+/* ========== Pilots Opinion ========== */
+
+.pilots {
+	background-image: url("../images/plane3.jpeg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-position: 50% 50%;
+}
+
+.pilots-overlay {
+	background-color: rgba(31, 31, 31, 0.75);
+	padding-top: 80px;
+	padding-bottom: 120px;
+}
+
+.carousel-indicators {
+	bottom: -10px;
+}
+
+.carousel-inner .item img {
+	border: 2px solid #dbd100;
+	border-radius: 50%;
+	padding: 3px;
+}
+
+.pilots-caption {
+	padding-bottom: 70px;
+}
+
+.pilots-caption h2 {
+	color: #dbd100;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 30px;
+	margin-top: 25px;
+}
+
+.pilots-caption h4 {
+	color: #dbd100;
+
+}
+.pilots-caption h4 span {
+	color: #D8D8D8;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.pilots-caption p {
+	color: #D8D8D8;
+	font-size: 18px;
+	font-style: italic;
+	line-height: 27px;
+	padding-top: 25px;
+}
+
+/* ========== technology ========== */
+
+.technology {
+	background-color: #fff;
+}
+
+.technology-overlay {
+	padding-top: 60px;
+	padding-bottom: 85px;
+}
+.technology-overlay h2 {
+	padding-bottom: 25px;
+}
+
+.technology-item i {
+	color: #dbd100;
+	font-size: 80px;
+}
+.technology-item h3 {
+	font-family: 'Source Sans Pro', sans-serif;
+	color:#000000;
+	font-weight: 700;
+	font-size: 35px;
+	margin-top: 15px;
+	margin-bottom: 1px;
+}
+
+.technology-item p {
+	color: #333333;
+	font-size: 20px;
+	margin-top: 0px;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* ========== Footer ========== */
+
+.footer {
+	background-color: #1a1a1a;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+#copyright {
+	width: 100%;
+}
+#copyright p {
+	color: #8C8B8A;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+#copyright p span {
+	text-decoration: none;
+	color: #dbd100;
+}
