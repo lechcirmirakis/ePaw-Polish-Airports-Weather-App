@@ -24,13 +24,15 @@ function initMap() {
 var airports = [
     ['Warsaw Chopin Airport', 52.161784, 20.965299, 1, "EPWA", "WAW", "52°09′57″N 20°58′02″E",
         "15/33 - 3690 × 60 m", "11/29 - 2800 × 50 m", "Okecie Tower 118,300 MHz",
-        "Okecie Ground 121,900 MHz", "Warsaw Approach 128,800 MHz", "www.lotnisko-chopina.pl", "https://www.lotnisko-chopina.pl/"
+        "Okecie Ground 121,900 MHz", "Warsaw Approach 128,800 MHz", "www.lotnisko-chopina.pl",
+        "https://www.lotnisko-chopina.pl/", "756135"
     ],
     ['Warsaw Modlin Airport', 52.454018, 20.651937, 2, "EPMO", "WMI", "52°27′04″N 20°39′06″E",
         "08/26 - 2500 × 45 m", "-", "Modlin Tower 123.925 MHz", "-", "Modlin Info 120.325 MHz", "www.modlinairport.pl", "http://modlinairport.pl/"
     ],
     ['Gdańsk Lech Walesa Airport', 54.372701, 18.468743, 3, "EPGD", "GDN", "54°22′39″N 18°27′58″E",
-        "11/29 - 2800 m x 45 m", "-", "Gdańsk Tower 118,100 MHz", "Gdańsk Approach 130,875 MHz", "-", "www.airport.gdansk.pl", "http://www.airport.gdansk.pl/"
+        "11/29 - 2800 m x 45 m", "-", "Gdańsk Tower 118,100 MHz", "Gdańsk Approach 130,875 MHz", "-",
+         "www.airport.gdansk.pl", "http://www.airport.gdansk.pl/", "3099434"
     ],
     ['"Solidarity" Szczecin-Goleniów Airport', 53.582821, 14.898251, 4, "EPSC", "SZZ", "53°35′05″N 14°54′07″E",
         "13/31 - 2500 × 60 m", "-", "Szczecin Tower 121,250 MHz", "-", "-", "www.airport.com.pl", "http://www.airport.com.pl/"
@@ -83,6 +85,7 @@ function setMarkers(map) {
     var grounds = document.getElementById('ground');
     var approachs = document.getElementById('approach');
     var www = document.getElementById('www');
+    var wbutton = document.getElementById('weather-button');
 
     // zmienna "trzymajaca" obrazek markera
     var image = {
@@ -114,6 +117,7 @@ function setMarkers(map) {
             approach: port[11],
             site: port[12],
             addres: port[13],
+            openweatherid: port[14],
         });
         markers.push(marker);
     }
@@ -134,8 +138,37 @@ function setMarkers(map) {
         approachs.innerText = this.approach;
         www.innerText = this.site;
         www.setAttribute('href', this.addres);
+        wbutton.dataset.id = this.openweatherid;
+        var vid = this.openweatherid;
+        console.log(vid);
+        $.ajax({
+          type: "GET",
+          dataType: 'json',
+          url: "https://api.openweathermap.org/data/2.5/weather?id="+vid+"&lang=pl&units=metric&appid=d1b32a80a97b96affa742e5fa6a692b5"
+        })
+        .done(function(response){
+          let imga = response.weather[0].icon;
+          console.log(response.name);
+          console.log(response.weather[0].main);
+          console.log(response.main.pressure);
+          console.log(response.main.humidity);
+          console.log(response.main.temp_min);
+          console.log(response.main.temp_max);
+          console.log("predkosc wiatru:" + response.wind.speed);
+          console.log(response.weather[0].description);
+          let wicon = $('#weathericon');
+          wicon.attr('src', "https://openweathermap.org/img/w/"+imga+".png" );
+
+        })
+        .fail(function(error){
+          console.log(error);
+        })
+        .always(function(){
+          console.log("Ok zakończyłem ajaxa");
+        })
     });
     }
+    console.log(wbutton);
 }
 
 // Funkcja tworzaca button do resetowania zoomu
