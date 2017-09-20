@@ -86,6 +86,7 @@ function setMarkers(map) {
     var approachs = document.getElementById('approach');
     var www = document.getElementById('www');
     var wbutton = document.getElementById('weather-button');
+    var whs = document.getElementById('whs');
 
     // zmienna "trzymajaca" obrazek markera
     var image = {
@@ -156,8 +157,9 @@ function setMarkers(map) {
           console.log(response.main.temp_max);
           console.log("predkosc wiatru:" + response.wind.speed);
           console.log(response.weather[0].description);
-          let wicon = $('#weathericon');
+          let wicon = $('#weathericon')
           wicon.attr('src', "https://openweathermap.org/img/w/"+imga+".png" );
+          whs.innerText = response.name
 
         })
         .fail(function(error){
@@ -169,6 +171,34 @@ function setMarkers(map) {
     });
     }
     console.log(wbutton);
+}
+
+// Okno modalne dla buttona
+
+// Get the modal
+var modalw = document.getElementById('weatherModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("weather-button");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    modalw.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modalw.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modalw) {
+        modalw.style.display = "none";
+    }
 }
 
 // Funkcja tworzaca button do resetowania zoomu
