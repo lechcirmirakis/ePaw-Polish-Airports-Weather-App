@@ -73,7 +73,7 @@
                             <div class="header-btns">
 
                                 <!-- Header buttons -->
-                                <a class="btn btn-download" data-toggle="modal" data-target="#myModal" href="#">Ściągnij</a>
+                                <a class="btn btn-download" data-toggle="modal" data-target="#myModal">Ściągnij</a>
 
                                 <!-- wyskakujace okno modalne -->
 
@@ -119,51 +119,6 @@
                                         informacje niezbędne dla każdego pilota, oraz przycisk,
                                         dzięki któremu sprawdzisz aktualne warunki pogodowe.</p>
 
-                                        <div id="weatherModal" class="modal fade">
-                                        <!-- Modal content -->
-                                            <div class="modal-w-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                    <h3 class="modal-title" id="weather-name">Wybierz lotnisko</h3>
-                                                    <p id="weather-description"></p>
-                                                    <img src="images/airicon.png" alt="weather_icon" id="weathericon">
-                                                </div>
-                                                  <div class="modal-body">
-                                                      <div class="row">
-                                                          <div class="col-md-6">
-                                                              <p id="weather-temperature"></p>
-                                                          </div>
-                                                          <div class="col-md-6 modal-detal">
-                                                              <p>Szczegoly:</p>
-                                                              <div class="line">
-                                                                  </div>
-                                                                     <p>Temperatura min: <span id="weather-temperature-min"></span></p>
-                                                                     <p>Ciśnienie: <span id="weather-pressure"></span></p>
-                                                                     <p>Zachmurzenie: <span id="weather-clouds"></span></p>
-                                                                     <p>Wilgotnosc: <span id="weather-humidity"></span></p>
-                                                                     <p>Prędkość wiatru: <span id="weather-wind-speed"></span></p>
-                                                                     <p>Kierunek wiatru: <span id="weather-wind-deg"></span></p>
-                                                                  </div>
-                                                      </div>
-                                                  </div>
-                                                  <div class="modal-footer">
-                                                    <p>Api from <a href="https://www.openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
-                                                  </div>
-
-
-
-
-                                            <!-- <p id="weather-temperature"></p>
-                                            <p id="weather-pressure"></p>
-                                            <p id="weather-humidity"></p>
-                                            <p id="weather-visibility"></p>
-                                            <p id="weather-wind-speed"></p>
-                                            <p id="weather-wind-deg"></p>
-                                            <p id="weather-clouds"></p>  -->
-                                        </div>
-                                        </div>
 
 
                                     <table class="table table-bordered text-center">
@@ -211,7 +166,40 @@
                                         </tr>
                                       </tbody>
                                     </table>
-
+                                    <div id="weatherModal" class="modal fade">
+                                    <!-- Modal content -->
+                                        <div class="modal-w-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h3 class="modal-title" id="weather-name">Wybierz lotnisko</h3>
+                                                <p id="weather-description"></p>
+                                                <img src="images/airicon.png" alt="weather_icon" id="weathericon">
+                                            </div>
+                                              <div class="modal-body">
+                                                  <div class="row">
+                                                      <div class="col-md-6">
+                                                          <p id="weather-temperature"></p>
+                                                      </div>
+                                                      <div class="col-md-6 modal-detal">
+                                                          <p>Szczegoly:</p>
+                                                          <div class="line">
+                                                              </div>
+                                                                 <p>Temperatura min: <span id="weather-temperature-min"></span></p>
+                                                                 <p>Ciśnienie: <span id="weather-pressure"></span></p>
+                                                                 <p>Zachmurzenie: <span id="weather-clouds"></span></p>
+                                                                 <p>Wilgotnosc: <span id="weather-humidity"></span></p>
+                                                                 <p>Prędkość wiatru: <span id="weather-wind-speed"></span></p>
+                                                                 <p>Kierunek wiatru: <span id="weather-wind-deg"></span></p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="modal-footer">
+                                                <p>Api from <a href="https://www.openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+                                              </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                         </div>
@@ -355,7 +343,6 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSHGZX2763Lb-SOwkgPwMVUtFQNtBkzss&callback=initMap">
     </script>
-    <!-- <script type="text/javascript" src="js/weatherapi.js"></script> -->
     <script type="text/javascript" src="js/map.js"></script>
 
 </body>

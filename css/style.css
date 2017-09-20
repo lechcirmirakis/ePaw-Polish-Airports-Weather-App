@@ -323,7 +323,7 @@ p {
 		width: 500px;
 }
 
-.modal-header {
+.modal-w-content .modal-header {
 	padding-bottom: 0 !important;
 	width: 100%;
 	border-bottom: none;
@@ -343,19 +343,19 @@ p {
 	padding: 0 !important;
 	margin: 0 !important;
 }
-.modal-body {
+.modal-w-content .modal-body {
 	background-color: #fff;
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 }
-.modal-body p {
+.modal-w-content .modal-body p {
 	padding: 0 !important;
 	margin: 0 !important;
 	font-weight: 500;
 }
-.modal-body .modal-detal {
+.modal-w-content .modal-body .modal-detal {
 	font-weight: 800;
 	padding: 20px 20px 20px 0 !important;
 }
@@ -377,16 +377,16 @@ p {
 	font-weight: 700;
 }
 
-.modal-footer {
+.modal-w-content .modal-footer {
 	margin: 0 !important;
 	padding: 0 !important;
 }
-.modal-footer p {
+.modal-w-content .modal-footer p {
 	font-size: 11px;
 	margin: 0 !important;
 	padding: 3px 15px 3px 0 !important;
 }
 /* The Close Button */
-.close {
+.modal-w-content .close {
 	font-size: 40px;
 }

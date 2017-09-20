@@ -103,7 +103,6 @@ function setMarkers(map) {
     var weatherClouds = document.getElementById('weather-clouds');
     var weatherTempM = document.getElementById('weather-temperature-min');
 
-
     // zmienna "trzymajaca" obrazek markera
     var image = {
         url: './images/airicon.png',
@@ -157,9 +156,10 @@ function setMarkers(map) {
         www.setAttribute('href', this.addres);
         weatherName.innerText = this.title+" ,PL";
 
-
         var vid = this.openweatherid;
-        console.log(vid);
+
+        // pobieranie danych pogodowych z API
+
         $.ajax({
           type: "GET",
           dataType: 'json',
@@ -175,9 +175,8 @@ function setMarkers(map) {
           weatherTempM.innerHTML = response.main.temp_min+"&deg;C";
           weatherHumi.innerText = response.main.humidity+" %";
           weatherWindS.innerText = response.wind.speed+" m/s";
-          weatherWindD.innerText = response.wind.deg+" &deg;C";
+          weatherWindD.innerText = response.wind.deg+" &deg; ";
           weatherClouds.innerText = response.clouds.all+" %";
-
         })
         .fail(function(error){
           console.log(error);
