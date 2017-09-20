@@ -86,7 +86,15 @@ function setMarkers(map) {
     var approachs = document.getElementById('approach');
     var www = document.getElementById('www');
     var wbutton = document.getElementById('weather-button');
-    var whs = document.getElementById('whs');
+    var weatherName = document.getElementById('weather-name');
+    var weatherDes = document.getElementById('weather-description');
+    var weatherTemp = document.getElementById('weather-temperature');
+    var weatherPress = document.getElementById('weather-pressure');
+    var weatherHumi = document.getElementById('weather-humidity');
+    var weatherVisi = document.getElementById('weather-visibility');
+    var weatherWindS = document.getElementById('weather-wind-speed');
+    var weatherWindD = document.getElementById('weather-wind-deg');
+    var weatherClouds = document.getElementById('weather-clouds');
 
     // zmienna "trzymajaca" obrazek markera
     var image = {
@@ -139,7 +147,9 @@ function setMarkers(map) {
         approachs.innerText = this.approach;
         www.innerText = this.site;
         www.setAttribute('href', this.addres);
-        wbutton.dataset.id = this.openweatherid;
+        weatherName.innerText = this.title;
+
+
         var vid = this.openweatherid;
         console.log(vid);
         $.ajax({
@@ -148,56 +158,25 @@ function setMarkers(map) {
           url: "https://api.openweathermap.org/data/2.5/weather?id="+vid+"&lang=pl&units=metric&appid=d1b32a80a97b96affa742e5fa6a692b5"
         })
         .done(function(response){
-          let imga = response.weather[0].icon;
-          console.log(response.name);
-          console.log(response.weather[0].main);
-          console.log(response.main.pressure);
-          console.log(response.main.humidity);
-          console.log(response.main.temp_min);
-          console.log(response.main.temp_max);
-          console.log("predkosc wiatru:" + response.wind.speed);
-          console.log(response.weather[0].description);
-          let wicon = $('#weathericon')
+          var imga = response.weather[0].icon;
+          var wicon = $('#weathericon');
           wicon.attr('src', "https://openweathermap.org/img/w/"+imga+".png" );
-          whs.innerText = response.name
-
+          weatherDes.innerText = response.weather[0].description;
+          weatherTemp.innerText = response.main.temp;
+          weatherPress.innerText = response.main.pressure;
+          weatherHumi.innerText = response.main.humidity;
+          weatherVisi.innerText = response.visibility;
+          weatherWindS.innerText = response.wind.speed;
+          weatherWindD.innerText = response.wind.deg;
+          weatherClouds.innerText = response.clouds.all;
         })
         .fail(function(error){
           console.log(error);
         })
         .always(function(){
-          console.log("Ok zakończyłem ajaxa");
+          console.log("Zaciagam pogode z Api");
         })
     });
-    }
-    console.log(wbutton);
-}
-
-// Okno modalne dla buttona
-
-// Get the modal
-var modalw = document.getElementById('weatherModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("weather-button");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-    modalw.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modalw.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modalw) {
-        modalw.style.display = "none";
     }
 }
 

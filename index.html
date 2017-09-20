@@ -110,14 +110,8 @@
             <div class="google-map-wrapper">
                 <div class="container">
                     <div class="row">
-
                         <div class="col-md-6">
-                            <div class="google-map-des">
                                 <div class="google-map-item">
-                                    <div class="fa_plane">
-                                        <i class="fa fa-plane"></i>
-                                    </div>
-
                                     <h3>Wybierz swoje lotnisko</h3>
                                     <p>Obok znajduje się mapa z zaznaczonymi
                                         najważniejszymi portami lotniczymi w polsce.
@@ -125,8 +119,24 @@
                                         informacje niezbędne dla każdego pilota, oraz przycisk,
                                         dzięki któremu sprawdzisz aktualne warunki pogodowe.</p>
 
-                                </div>
-                                <div class="google-map-item">
+                                        <div id="weatherModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <!-- Modal content -->
+                                            <div class="modal-w-content">
+
+                                            <h3 id="weather-name"><i class="fa fa-plane"></i> Wybierz Lotnisko</h3>
+                                            <img src="images/airicon.png" alt="weather_icon" id="weathericon">
+                                            <p id="weather-description"></p>
+                                            <p id="weather-temperature"></p>
+                                            <p id="weather-pressure"></p>
+                                            <p id="weather-humidity"></p>
+                                            <p id="weather-visibility"></p>
+                                            <p id="weather-wind-speed"></p>
+                                            <p id="weather-wind-deg"></p>
+                                            <p id="weather-clouds"></p>
+                                        </div>
+                                        </div>
+
+
                                     <table class="table table-bordered text-center">
                                       <thead>
                                         <tr>
@@ -168,23 +178,13 @@
                                           <td><a href="#" target="_blank" id="www">-</a></td>
                                         </tr>
                                         <tr>
-                                          <th><button type="button" class="btn btn-warning" data-id="" id="weather-button">Aktualna Pogoda</button></th>
-                                        </tr>
-
-                                        <tr>
-                                          <th><img src="" alt="icon" id="weathericon"></th>
+                                          <th colspan="2"><button type="button" class="btn btn-warning" data-id="" id="weather-button" data-toggle="modal" data-target="#weatherModal">Aktualna Pogoda</button></th>
                                         </tr>
                                       </tbody>
                                     </table>
-                                    <div id="weatherModal" class="modal-w">
-                                    <!-- Modal content -->
-                                    <div class="modal-w-content">
-                                    <span class="close">&times;</span>
-                                    <p id="whs">Some text in the Modal..</p>
-                                    </div>
-                                    </div>
+
                                 </div>
-                            </div>
+
                         </div>
                         <div class="col-md-6">
 
