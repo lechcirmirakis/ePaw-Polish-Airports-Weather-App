@@ -98,10 +98,11 @@ function setMarkers(map) {
     var weatherTemp = document.getElementById('weather-temperature');
     var weatherPress = document.getElementById('weather-pressure');
     var weatherHumi = document.getElementById('weather-humidity');
-    var weatherVisi = document.getElementById('weather-visibility');
     var weatherWindS = document.getElementById('weather-wind-speed');
     var weatherWindD = document.getElementById('weather-wind-deg');
     var weatherClouds = document.getElementById('weather-clouds');
+    var weatherTempM = document.getElementById('weather-temperature-min');
+
 
     // zmienna "trzymajaca" obrazek markera
     var image = {
@@ -154,7 +155,7 @@ function setMarkers(map) {
         approachs.innerText = this.approach;
         www.innerText = this.site;
         www.setAttribute('href', this.addres);
-        weatherName.innerText = this.title;
+        weatherName.innerText = this.title+" ,PL";
 
 
         var vid = this.openweatherid;
@@ -169,13 +170,14 @@ function setMarkers(map) {
           var wicon = $('#weathericon');
           wicon.attr('src', "https://openweathermap.org/img/w/"+imga+".png" );
           weatherDes.innerText = response.weather[0].description;
-          weatherTemp.innerText = response.main.temp;
-          weatherPress.innerText = response.main.pressure;
-          weatherHumi.innerText = response.main.humidity;
-          weatherVisi.innerText = response.visibility;
-          weatherWindS.innerText = response.wind.speed;
-          weatherWindD.innerText = response.wind.deg;
-          weatherClouds.innerText = response.clouds.all;
+          weatherTemp.innerHTML = response.main.temp+"&deg;C";
+          weatherPress.innerText = " "+response.main.pressure+ " hPa";
+          weatherTempM.innerHTML = response.main.temp_min+"&deg;C";
+          weatherHumi.innerText = response.main.humidity+" %";
+          weatherWindS.innerText = response.wind.speed+" m/s";
+          weatherWindD.innerText = response.wind.deg+" &deg;C";
+          weatherClouds.innerText = response.clouds.all+" %";
+
         })
         .fail(function(error){
           console.log(error);

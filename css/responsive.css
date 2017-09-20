@@ -18,16 +18,12 @@
     }
     .modal-w-content {
     	width: 300px;
-    	min-height: 200px;
     }
 
 }
 /* Small Devices And Tablets */
 @media only screen and (max-width: 768px) {
 
-    .fa_plane {
-        display: none;
-    }
     .header-text, .header-btns {
         text-align: center;
     }
