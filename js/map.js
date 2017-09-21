@@ -175,7 +175,7 @@ function setMarkers(map) {
           weatherTempM.innerHTML = response.main.temp_min+"&deg;C";
           weatherHumi.innerText = response.main.humidity+" %";
           weatherWindS.innerText = response.wind.speed+" m/s";
-          weatherWindD.innerText = response.wind.deg+" &deg; ";
+          weatherWindD.innerHTML = response.wind.deg+"&deg;";
           weatherClouds.innerText = response.clouds.all+" %";
         })
         .fail(function(error){
