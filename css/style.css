@@ -85,7 +85,10 @@ p {
 	min-height: 700px;
 }
 .logo {
-	padding-bottom: 50px;
+	padding-bottom: 115px;
+}
+.logo img {
+	display: none;
 }
 .header-text h1 {
 	color: #fff;
