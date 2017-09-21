@@ -7,6 +7,152 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('mapa'), {
         zoom: 6,
         center: poland,
+        styles: [
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#13e437"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#FFAD00"
+            },
+            {
+                "saturation": 50.2
+            },
+            {
+                "lightness": -34.8
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#f2b00f"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#FFC300"
+            },
+            {
+                "saturation": 54.2
+            },
+            {
+                "lightness": -14.4
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#e4b817"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#FFAD00"
+            },
+            {
+                "saturation": -19.8
+            },
+            {
+                "lightness": -1.8
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#FFAD00"
+            },
+            {
+                "saturation": 72.4
+            },
+            {
+                "lightness": -32.6
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#FFAD00"
+            },
+            {
+                "saturation": 74.4
+            },
+            {
+                "lightness": -18
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#00FFA6"
+            },
+            {
+                "saturation": -63.2
+            },
+            {
+                "lightness": 38
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#feffae"
+            }
+        ]
+    }
+]
     });
 
     // tworze diva na button resetujacy zooma i wysrodkowujacy z powrotem do pozycji wejsciowej
