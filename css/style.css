@@ -335,11 +335,13 @@ p {
 	padding: 0 !important;
 	margin: 0 !important;
 }
-.modal-w-content .modal-header h3 {
+.modal-w-content .modal-header h4 {
 	padding: 0 !important;
 	margin: 0 !important;
 	text-transform: none;
 	color: #000;
+	font-weight: 700;
+	font-size: 20px;
 }
 
 .modal-w-content .modal-header img {
@@ -354,15 +356,17 @@ p {
 	margin-bottom: 0 !important;
 }
 .modal-w-content .modal-body p {
-	padding: 0 !important;
+	padding: 3px !important;
 	margin: 0 !important;
 	font-weight: 500;
 }
 .modal-w-content .modal-body .modal-detal {
+	position: relative;
 	font-weight: 800;
 	padding: 20px 20px 20px 0 !important;
 }
 .line {
+	position: absolute;
 	height: 1px;
 	width: 170px;
 	background-color: #dbdbdb;
@@ -375,7 +379,7 @@ p {
 	font-weight: 700;
 }
 
-#weather-temperature {
+.modal-w-content h3 {
 	font-size: 80px;
 	font-weight: 700;
 }

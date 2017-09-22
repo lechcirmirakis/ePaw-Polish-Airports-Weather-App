@@ -51,3 +51,29 @@ var airports = [
     ],
     // ['Zielona Góra-Babimost Airport', 52.138798, 15.799416, 13],
 ];
+// tworze zmienna poland ktora zawiera wspolrzedne na ktore bedzie wycentrowana mapa
+var poland = {lat: 52.363, lng: 19.044};
+// zmienne z DOM-u w ktore beda "wciskane dane lotnisk"
+var airportName = document.getElementById('airport_name');
+var icaoName = document.getElementById('icao_name');
+var iataName = document.getElementById('iata_name');
+var cords = document.getElementById('coordinates');
+var rwy01 = document.getElementById('rwy_01');
+var rwy02 = document.getElementById('rwy_02');
+var towers = document.getElementById('tower');
+var grounds = document.getElementById('ground');
+var approachs = document.getElementById('approach');
+var www = document.getElementById('www');
+var wbutton = document.getElementById('weather-button');
+var weatherName = document.getElementById('weather-name');
+var weatherDes = document.getElementById('weather-description');
+var weatherTemp = document.getElementById('weather-temperature');
+var weatherPress = document.getElementById('weather-pressure');
+var weatherHumi = document.getElementById('weather-humidity');
+var weatherWindS = document.getElementById('weather-wind-speed');
+var weatherWindD = document.getElementById('weather-wind-deg');
+var weatherClouds = document.getElementById('weather-clouds');
+var weatherTempM = document.getElementById('weather-temperature-min');
+
+// tworze pusta tablice do ktorej beda zpushowane stworzone markery
+var markers = [];

@@ -1,4 +1,14 @@
-/* Small Devices */
+@media only screen and (max-width: 992px) {
+
+    .modal-w-content {
+        width: 400px;
+        text-align: center;
+    }
+    .line {
+        left: 105px;
+    }
+}
+
 @media only screen and (max-width: 767px) {
 
     .navbar-default {
@@ -19,12 +29,11 @@
     .modal-w-content {
     	width: 300px;
     }
-
-}
-/* Small Devices And Tablets */
-@media only screen and (max-width: 768px) {
-
+    .line {
+        left: 55px;
+    }
     .header-text, .header-btns {
         text-align: center;
     }
+
 }
