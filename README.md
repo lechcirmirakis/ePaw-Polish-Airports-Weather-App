@@ -6,21 +6,6 @@ Final project from CodersLab course.
 
 The application shows the current weather at the most important civil Polish airports.
 
-list of airports:
-
-EPGD - Gdańsk Lech Walesa Airport,
-EPSC - "Solidarity" Szczecin-Goleniów Airport,
-EPBY - Bydgoszcz Ignacy Jan Paderewski Airport
-EPPO - Poznań–Ławica Henryk Wieniawski Airport
-EPMO - Warsaw Modlin Airport
-EPWA - Warsaw Chopin Airport
-EPLL - Łódź Władysław Reymont Airport
-EPWR - Wrocław-Copernicus Airport
-EPKT - Katowice International Airport
-EPKK - John Paul II Airport Kraków–Balice
-EPLB - Lublin Airport
-EPRZ - Rzeszów-Jasionka Airport
-
 Used technologies:
 
 1. Html5
@@ -29,5 +14,21 @@ Used technologies:
 4. JavaScript
 5. jQuery
 6. Ajax
+
+list of airports:
+
+1. EPGD - Gdańsk Lech Walesa Airport,
+2. EPSC - "Solidarity" Szczecin-Goleniów Airport,
+3. EPBY - Bydgoszcz Ignacy Jan Paderewski Airport
+4. EPPO - Poznań–Ławica Henryk Wieniawski Airport
+5. EPMO - Warsaw Modlin Airport
+6. EPWA - Warsaw Chopin Airport
+7. EPLL - Łódź Władysław Reymont Airport
+8. EPWR - Wrocław-Copernicus Airport
+9. EPKT - Katowice International Airport
+10. EPKK - John Paul II Airport Kraków–Balice
+11. EPLB - Lublin Airport
+12. EPRZ - Rzeszów-Jasionka Airport
+
 
 
