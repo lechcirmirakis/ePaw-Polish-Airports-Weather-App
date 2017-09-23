@@ -8,8 +8,8 @@ The application shows the current weather at the most important civil Polish air
 
 list of airports:
 
-EPGD - Gdańsk Lech Walesa Airport
-EPSC - "Solidarity" Szczecin-Goleniów Airport
+EPGD - Gdańsk Lech Walesa Airport,
+EPSC - "Solidarity" Szczecin-Goleniów Airport,
 EPBY - Bydgoszcz Ignacy Jan Paderewski Airport
 EPPO - Poznań–Ławica Henryk Wieniawski Airport
 EPMO - Warsaw Modlin Airport
