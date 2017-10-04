@@ -1,4 +1,4 @@
-# ePaw-projekt-koncowy-CodersLab
+# ePaw-final project from CodersLab Bootcamp
 
 live version: http://lechcirmirakis.pl/epaw-coderslab-final-project/
 
