@@ -4,8 +4,13 @@
         width: 400px;
         text-align: center;
     }
+
     .line {
         left: 105px;
+    }
+
+    .footer {
+        text-align: center;
     }
 }
 
@@ -21,9 +26,6 @@
     .google-map-item {
     	padding-left: 15px;
         padding-right: 15px;
-        text-align: center;
-    }
-    .footer {
         text-align: center;
     }
     .modal-w-content {
