@@ -20,9 +20,11 @@
         background-color: #fff !important;
         border-color: #e6e6e6;
     }
+
     #mapa {
         width: 100%;
     }
+    
     .google-map-item {
     	padding-left: 15px;
         padding-right: 15px;
