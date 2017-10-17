@@ -8,7 +8,7 @@ The application shows the current weather at the most important civil Polish air
 
 ![alt text](https://github.com/lechcirmirakis/ePaw-Polish-Airports-Weather-App/blob/master/images/screen.jpg)
 
-Used technologies:
+**Used technologies:**
 
 1. Html5
 2. Css3
@@ -17,7 +17,7 @@ Used technologies:
 5. jQuery
 6. Ajax
 
-list of airports:
+**List of airports:**
 
 1. EPGD - Gdańsk Lech Walesa Airport,
 2. EPSC - "Solidarity" Szczecin-Goleniów Airport,
