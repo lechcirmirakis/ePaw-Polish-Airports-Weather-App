@@ -6,6 +6,8 @@ Final project from CodersLab course.
 
 The application shows the current weather at the most important civil Polish airports.
 
+![alt text](https://github.com/lechcirmirakis/ePaw-Polish-Airports-Weather-App/blob/master/images/screen.jpg)
+
 Used technologies:
 
 1. Html5
@@ -29,6 +31,3 @@ list of airports:
 10. EPKK - John Paul II Airport Kraków–Balice
 11. EPLB - Lublin Airport
 12. EPRZ - Rzeszów-Jasionka Airport
-
-
-
