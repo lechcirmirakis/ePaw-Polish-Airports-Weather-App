@@ -1,6 +1,6 @@
 # ePaw-final project from CodersLab Bootcamp
 
-live version: http://lechcirmirakis.pl/epaw-coderslab-final-project/
+live version: http://lechcirmirakis.pl/epaw-coderslab-final-project/ - right click and open in new tab
 
 Final project from CodersLab course.
 
